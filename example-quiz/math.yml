@@ -2,6 +2,33 @@ uid: math
 tags: [math]
 content:
 - header1: Your $math$ knowledge
+- line_chart:
+    data:
+        datasets:
+        - label: Hmmm, what could it be?
+          fill: false
+          borderColor: darkgray
+          pointBackgroundColor: black
+          lineTension: 0
+          data:
+          - {x: -2, y: -2}
+          - {x: -2, y:  2}
+          - {x:  0, y:  0}
+          - {x:  2, y:  2}
+          - {x:  2, y: -2}
+    options:
+        animation: false
+        legend:
+            onClick: false
+        scales:
+            xAxes:
+            - {type: linear, position: bottom, ticks: {min: -4, max: 4}}
+            yAxes:
+            - {type: linear, position: left, ticks: {min: -4, max: 4}}
+- text: Which letter from the latin alphabet is hiding in the graph above?
+- task_text:
+    correct_answers: [M]
+- separator
 - text: "What is the solution of the following integral:"
 - text: $\int x \cdot e^x dx$
 - task_mc_one_correct:

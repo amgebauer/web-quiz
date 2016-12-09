@@ -60,6 +60,8 @@
             </label>
         </div>
     </template>
+    <line-chart v-if="snippet.line_chart" :data="snippet.line_chart.data"
+        :options="snippet.line_chart.options" />
 </div>
 </template>
 
@@ -67,6 +69,7 @@
 declare var require: any;
 
 const FlavoredText = require("./FlavoredText.vue").default;
+const LineChart = require("./LineChart.vue").default;
 
 export default {
     data() {
@@ -99,7 +102,8 @@ export default {
         }
     },
     components: {
-        "fl-text": FlavoredText
+        "fl-text": FlavoredText,
+        "line-chart": LineChart
     }
 }
 </script>

@@ -32,6 +32,8 @@
             <mc-answer :answer="answer" type="radio" />
         </template>
     </template>
+    <line-chart v-if="snippet.line_chart" :data="snippet.line_chart.data"
+        :options="snippet.line_chart.options" />
 </div>
 </template>
 
@@ -41,13 +43,15 @@ declare var require: any;
 const FlavoredText = require("./FlavoredText.vue").default;
 const MCAnswer = require("./ResultMCAnswer.vue").default;
 const TextAnswer = require("./ResultTextAnswer.vue").default;
+const LineChart = require("./LineChart.vue").default;
 
 export default {
     props: ["snippet"],
     components: {
         "fl-text": FlavoredText,
         "mc-answer": MCAnswer,
-        "text-answer": TextAnswer
+        "text-answer": TextAnswer,
+        "line-chart": LineChart
     }
 }
 </script>
