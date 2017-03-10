@@ -41,13 +41,15 @@ declare var require: any;
 const FlavoredText = require("./FlavoredText.vue").default;
 const MCAnswer = require("./ResultMCAnswer.vue").default;
 const TextAnswer = require("./ResultTextAnswer.vue").default;
+const ResponsiveImage = require("./ResponsiveImage.vue").default;
 
 export default {
     props: ["snippet"],
     components: {
         "fl-text": FlavoredText,
         "mc-answer": MCAnswer,
-        "text-answer": TextAnswer
+        "text-answer": TextAnswer,
+        "resp-img": ResponsiveImage
     }
 }
 </script>
