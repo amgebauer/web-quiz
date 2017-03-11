@@ -23,7 +23,7 @@ export default {
             return this.snippet.src;
         },
         alt() {
-            if(isString(this.snippet) || !this.snippet.srcset) {
+            if(isString(this.snippet) || !this.snippet.alt) {
                 return "";
             }
             return this.snippet.alt;
